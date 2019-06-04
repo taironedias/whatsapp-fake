@@ -16,6 +16,10 @@
 		1820A52E22A5B3FB0092FE10 /* LogCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A52D22A5B3FB0092FE10 /* LogCustom.swift */; };
 		1820A53122A5DD6A0092FE10 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */; };
 		1820A53422A5E7030092FE10 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A53322A5E7030092FE10 /* Base64.swift */; };
+		18C868BA22A693CD00F3EDD7 /* FirebaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C868B922A693CD00F3EDD7 /* FirebaseUtil.swift */; };
+		18C868BC22A69BB300F3EDD7 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C868BB22A69BB300F3EDD7 /* Usuario.swift */; };
+		18C868C122A6B13C00F3EDD7 /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C868C022A6B13C00F3EDD7 /* ContatoTableViewCell.swift */; };
+		18C868C322A6B26400F3EDD7 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C868C222A6B26400F3EDD7 /* ContatosViewController.swift */; };
 		4E2FAD80BAE3247E6B334F35 /* Pods_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5716A0DC7FDEF56411FDC359 /* Pods_WhatsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		1820A52D22A5B3FB0092FE10 /* LogCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCustom.swift; sourceTree = "<group>"; };
 		1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		1820A53322A5E7030092FE10 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		18C868B922A693CD00F3EDD7 /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
+		18C868BB22A69BB300F3EDD7 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		18C868C022A6B13C00F3EDD7 /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
+		18C868C222A6B26400F3EDD7 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		5716A0DC7FDEF56411FDC359 /* Pods_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B738DB411C71AE6BBEE835F /* Pods-WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-WhatsApp/Pods-WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		90F349FF991462E1A5B9CEC9 /* Pods-WhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.release.xcconfig"; path = "Target Support Files/Pods-WhatsApp/Pods-WhatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 		1820A51622A5AD4F0092FE10 /* WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				18C868BD22A6B0F300F3EDD7 /* Celula */,
 				1820A53222A5E6E60092FE10 /* Helper */,
 				1820A52C22A5B3EA0092FE10 /* Models */,
 				1820A52922A5AE070092FE10 /* ViewControllers */,
@@ -95,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1820A52D22A5B3FB0092FE10 /* LogCustom.swift */,
+				18C868BB22A69BB300F3EDD7 /* Usuario.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */,
+				18C868C222A6B26400F3EDD7 /* ContatosViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -111,8 +122,17 @@
 			isa = PBXGroup;
 			children = (
 				1820A53322A5E7030092FE10 /* Base64.swift */,
+				18C868B922A693CD00F3EDD7 /* FirebaseUtil.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		18C868BD22A6B0F300F3EDD7 /* Celula */ = {
+			isa = PBXGroup;
+			children = (
+				18C868C022A6B13C00F3EDD7 /* ContatoTableViewCell.swift */,
+			);
+			path = Celula;
 			sourceTree = "<group>";
 		};
 		8D6AFF3C8CD833598187BEA1 /* Pods */ = {
@@ -212,6 +232,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WhatsApp/Pods-WhatsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -221,6 +242,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -258,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C868C122A6B13C00F3EDD7 /* ContatoTableViewCell.swift in Sources */,
+				18C868BC22A69BB300F3EDD7 /* Usuario.swift in Sources */,
 				1820A51A22A5AD4F0092FE10 /* ViewController.swift in Sources */,
 				1820A53122A5DD6A0092FE10 /* AjustesViewController.swift in Sources */,
+				18C868BA22A693CD00F3EDD7 /* FirebaseUtil.swift in Sources */,
+				18C868C322A6B26400F3EDD7 /* ContatosViewController.swift in Sources */,
 				1820A52B22A5B1CB0092FE10 /* CadastroViewController.swift in Sources */,
 				1820A51822A5AD4F0092FE10 /* AppDelegate.swift in Sources */,
 				1820A53422A5E7030092FE10 /* Base64.swift in Sources */,

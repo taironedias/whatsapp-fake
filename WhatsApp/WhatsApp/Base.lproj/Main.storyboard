@@ -200,7 +200,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0z7-W7-G1Z">
                                 <rect key="frame" x="16" y="80" width="343" height="130"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GnC-3E-NbX">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padrao" translatesAutoresizingMaskIntoConstraints="NO" id="GnC-3E-NbX">
                                         <rect key="frame" x="0.0" y="5" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="CRE-Rg-Yoz"/>
@@ -312,18 +312,96 @@
         <!--Contatos-->
         <scene sceneID="Egq-Pn-PMQ">
             <objects>
-                <viewController id="vin-lR-fhw" sceneMemberID="viewController">
+                <viewController id="vin-lR-fhw" customClass="ContatosViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNb-12-DJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RqL-7K-dub">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l71-Ws-5wh">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaContatos" id="he0-Rp-JBD" customClass="ContatoTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="he0-Rp-JBD" id="mvU-rL-SnY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-1y-Eku">
+                                                    <rect key="frame" x="73" y="14.5" width="147.5" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do contato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWo-J0-x2h">
+                                                            <rect key="frame" x="0.0" y="0.0" width="147.5" height="23"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email do contato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="625-f4-SWu">
+                                                            <rect key="frame" x="0.0" y="24" width="108" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-U9-kG2">
+                                                    <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="BnQ-d6-CuV"/>
+                                                        <constraint firstAttribute="height" constant="50" id="VcV-4m-RCc"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fKM-1y-Eku" firstAttribute="leading" secondItem="MfI-U9-kG2" secondAttribute="trailing" constant="8" id="9PE-XA-p3Q"/>
+                                                <constraint firstItem="MfI-U9-kG2" firstAttribute="leading" secondItem="mvU-rL-SnY" secondAttribute="leadingMargin" id="HW9-qV-Vvc"/>
+                                                <constraint firstItem="MfI-U9-kG2" firstAttribute="centerY" secondItem="mvU-rL-SnY" secondAttribute="centerY" id="krp-pc-KMl"/>
+                                                <constraint firstItem="fKM-1y-Eku" firstAttribute="centerY" secondItem="mvU-rL-SnY" secondAttribute="centerY" id="v6i-Nb-lN4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLabel" destination="625-f4-SWu" id="U8f-UB-Tqw"/>
+                                            <outlet property="fotoImageView" destination="MfI-U9-kG2" id="aeZ-Xv-tJW"/>
+                                            <outlet property="nomeLabel" destination="hWo-J0-x2h" id="5JC-sO-xOu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vin-lR-fhw" id="6il-Nf-hLz"/>
+                                    <outlet property="delegate" destination="vin-lR-fhw" id="Wkw-cl-QTR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l71-Ws-5wh" firstAttribute="leading" secondItem="ad9-im-UZ0" secondAttribute="leading" id="Ead-ET-y9i"/>
+                            <constraint firstItem="l71-Ws-5wh" firstAttribute="top" secondItem="RqL-7K-dub" secondAttribute="bottom" id="Msz-Z1-Qrh"/>
+                            <constraint firstItem="l71-Ws-5wh" firstAttribute="trailing" secondItem="ad9-im-UZ0" secondAttribute="trailing" id="Oub-fc-yOk"/>
+                            <constraint firstItem="l71-Ws-5wh" firstAttribute="bottom" secondItem="ad9-im-UZ0" secondAttribute="bottom" id="UxB-p4-NAd"/>
+                            <constraint firstItem="RqL-7K-dub" firstAttribute="top" secondItem="ad9-im-UZ0" secondAttribute="top" id="VIt-Pb-kxO"/>
+                            <constraint firstItem="RqL-7K-dub" firstAttribute="trailing" secondItem="ad9-im-UZ0" secondAttribute="trailing" id="bS7-tu-UZ3"/>
+                            <constraint firstItem="RqL-7K-dub" firstAttribute="leading" secondItem="ad9-im-UZ0" secondAttribute="leading" id="d7Q-W1-neD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ad9-im-UZ0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contatos" id="II1-gp-Pc4"/>
+                    <connections>
+                        <outlet property="tableViewContatos" destination="l71-Ws-5wh" id="pCv-qo-xcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8G-M8-yFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3294.202898550725" y="442.66304347826093"/>
+            <point key="canvasLocation" x="3293.5999999999999" y="442.12893553223392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LGF-Lt-IhV">
@@ -406,6 +484,7 @@
         <image name="contatos" width="30" height="30"/>
         <image name="conversas" width="30" height="30"/>
         <image name="logo" width="416" height="339"/>
+        <image name="padrao" width="500" height="446"/>
         <image name="usuario" width="256" height="192"/>
     </resources>
 </document>
