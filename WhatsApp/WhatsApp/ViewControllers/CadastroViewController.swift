@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class CadastroViewController: UIViewController {
 
@@ -17,11 +18,13 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var btnCadastrar: UIButton!
     
     var auth: Auth!
+    var database: Database!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.auth = Auth.auth()
+        self.database = Database.database()
         self.btnCadastrar.layer.cornerRadius = 5
     }
     
@@ -39,6 +42,16 @@ class CadastroViewController: UIViewController {
                                 LogCustom.log(mensagem: "Erro ao cadastrar usuário")
                                 return
                             }
+                            
+                            var user: Dictionary<String, String> = [:]
+                            user["email"] = email
+                            user["nome"] = nome
+                            
+                            // Codificando para Base 64 o email
+                            let key = Base64.encodingStringToBase64(texto: email)
+                            
+                            let usuarios = self.database.reference().child("usuarios")
+                            usuarios.child(key).setValue(user)
                             
                             LogCustom.log(mensagem: "Usuário cadastrado com sucesso")
                         }

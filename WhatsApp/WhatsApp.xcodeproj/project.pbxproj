@@ -15,6 +15,7 @@
 		1820A52B22A5B1CB0092FE10 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A52A22A5B1CB0092FE10 /* CadastroViewController.swift */; };
 		1820A52E22A5B3FB0092FE10 /* LogCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A52D22A5B3FB0092FE10 /* LogCustom.swift */; };
 		1820A53122A5DD6A0092FE10 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */; };
+		1820A53422A5E7030092FE10 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A53322A5E7030092FE10 /* Base64.swift */; };
 		4E2FAD80BAE3247E6B334F35 /* Pods_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5716A0DC7FDEF56411FDC359 /* Pods_WhatsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		1820A52A22A5B1CB0092FE10 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		1820A52D22A5B3FB0092FE10 /* LogCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCustom.swift; sourceTree = "<group>"; };
 		1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		1820A53322A5E7030092FE10 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		5716A0DC7FDEF56411FDC359 /* Pods_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B738DB411C71AE6BBEE835F /* Pods-WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-WhatsApp/Pods-WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		90F349FF991462E1A5B9CEC9 /* Pods-WhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.release.xcconfig"; path = "Target Support Files/Pods-WhatsApp/Pods-WhatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		1820A51622A5AD4F0092FE10 /* WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				1820A53222A5E6E60092FE10 /* Helper */,
 				1820A52C22A5B3EA0092FE10 /* Models */,
 				1820A52922A5AE070092FE10 /* ViewControllers */,
 				1820A51722A5AD4F0092FE10 /* AppDelegate.swift */,
@@ -102,6 +105,14 @@
 				1820A53022A5DD6A0092FE10 /* AjustesViewController.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		1820A53222A5E6E60092FE10 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1820A53322A5E7030092FE10 /* Base64.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8D6AFF3C8CD833598187BEA1 /* Pods */ = {
@@ -251,6 +262,7 @@
 				1820A53122A5DD6A0092FE10 /* AjustesViewController.swift in Sources */,
 				1820A52B22A5B1CB0092FE10 /* CadastroViewController.swift in Sources */,
 				1820A51822A5AD4F0092FE10 /* AppDelegate.swift in Sources */,
+				1820A53422A5E7030092FE10 /* Base64.swift in Sources */,
 				1820A52E22A5B3FB0092FE10 /* LogCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
