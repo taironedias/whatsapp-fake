@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import SDWebImage
 
 class ContatosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -53,6 +54,31 @@ class ContatosViewController: UIViewController, UITableViewDelegate, UITableView
         celula.nomeLabel.text = userR.nome
         celula.emailLabel.text = userR.email
         celula.fotoImageView.image = UIImage(named: "padrao")
+        
+        let imagensPerfil = self.storage.reference().child("imagens").child("perfil")
+        let namePhoto = userR.foto
+        let imgFile = imagensPerfil.child(namePhoto)
+        
+        imgFile.getMetadata { (metaData, error) in
+            if error != nil {
+                LogCustom.log(mensagem: "Erro ao carregar a imagem!")
+                return
+            }
+            
+            // START Download URL
+            imgFile.downloadURL(completion: { (url, error) in
+                if let urlResult = url?.absoluteString {
+                    let url = String(describing: urlResult)
+                    //LogCustom.log(mensagem: "Url: \(url)")
+                    
+                    celula.fotoImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "padrao"))
+                    
+                }
+            })
+            // END Download URL
+        }
+        
+        
         
         return celula
     }
